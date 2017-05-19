@@ -1,0 +1,18 @@
+{{title}}
+
+<!--<form id="contact-form" method="POST" action="assets/email.php">-->
+<form (submit)="sendEmail(message)">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="Your Name" [(ngModel)]="message.name">
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input type="text" name="email" placeholder="Your Email" [(ngModel)]="message.email">
+  </div>
+  <div>
+    <label for="message">Message</label>
+    <textarea rows="6" name="message" [(ngModel)]="message.message"></textarea>
+  </div>
+  <button type="submit">Send Email</button>
+</form>
